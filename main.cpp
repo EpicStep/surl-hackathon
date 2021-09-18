@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
 
     std::string body = R"({"id":0, "jsonrpc":"2.0","method":")" + methodStr + R"(","params":[]})";
 
-    cpr::Response r = cpr::Post(cpr::Url{url}, cpr::Body(body), cpr::Header{{"Content-Type", "application/json"}});
+    cpr::Response r = cpr::Post(cpr::Url{url}, cpr::Body(body));
 
     if (r.error) {
         std::cout << "(surl) " + r.error.message << std::endl;
