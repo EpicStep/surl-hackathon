@@ -1,4 +1,9 @@
 .idea
+
+_CPack_Packages
+CPackConfig.cmake
+CPackSourceConfig.cmake
+
 ##### Windows
 # Windows thumbnail cache files
 Thumbs.db

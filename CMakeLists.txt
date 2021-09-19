@@ -6,6 +6,14 @@ FetchContent_Declare(cpr GIT_REPOSITORY https://github.com/libcpr/cpr.git GIT_TA
 FetchContent_MakeAvailable(cpr)
 
 set(CMAKE_CXX_STANDARD 17)
+
+set(CPACK_PACKAGE_NAME "surl")
+set(CPACK_PACKAGE_CONTACT "epicstyt@gmail.com")
+
+include(CPack)
+
 add_executable(surl main.cpp)
+
+install(TARGETS surl DESTINATION bin)
 
 target_link_libraries(surl PRIVATE cpr::cpr)
